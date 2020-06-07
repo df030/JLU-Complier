@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1040</width>
+    <height>710</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1222</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="4" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout" stretch="3,2">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout" stretch="5,2">
+        <item>
+         <widget class="QTextEdit" name="textEdit"/>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>lexical analysis table:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTableView" name="tableView_lex"/>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QTabWidget" name="tabWidget">
+        <property name="tabPosition">
+         <enum>QTabWidget::South</enum>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="tab">
+         <attribute name="title">
+          <string>Error Message</string>
+         </attribute>
+         <widget class="QTextEdit" name="textEdit_ErrorWin">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>1011</width>
+            <height>221</height>
+           </rect>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="tab_3">
+         <attribute name="title">
+          <string>Codes Table</string>
+         </attribute>
+         <widget class="QWidget" name="horizontalLayoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>1011</width>
+            <height>221</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_4">
+             <item>
+              <widget class="QLabel" name="label_2">
+               <property name="text">
+                <string>intermedicate code:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QTableView" name="tableView_inter"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_3">
+             <item>
+              <widget class="QLabel" name="label_3">
+               <property name="text">
+                <string>object code:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QTableView" name="tableView_obj"/>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="tab_2">
+         <attribute name="title">
+          <string>Console</string>
+         </attribute>
+         <widget class="QTextEdit" name="textEdit_ConsoleWin">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>1011</width>
+            <height>221</height>
+           </rect>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1040</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>词法分析</string>
+    </property>
+    <addaction name="Lexical"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>语法分析</string>
+    </property>
+    <widget class="QMenu" name="menuLL_1">
+     <property name="title">
+      <string>LL(1)语法分析</string>
+     </property>
+     <addaction name="actionFirst"/>
+     <addaction name="actionFollow"/>
+     <addaction name="actionPredict"/>
+    </widget>
+    <addaction name="Grammar"/>
+    <addaction name="GramTable"/>
+    <addaction name="menuLL_1"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="actionopen"/>
+    <addaction name="actionsave"/>
+    <addaction name="actionsaveas"/>
+   </widget>
+   <widget class="QMenu" name="menu_5">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="actionabout"/>
+   </widget>
+   <widget class="QMenu" name="menu_4">
+    <property name="title">
+     <string>语义分析</string>
+    </property>
+    <widget class="QMenu" name="menu_6">
+     <property name="title">
+      <string>中间代码生成</string>
+     </property>
+     <addaction name="actioninter"/>
+     <addaction name="actionobj"/>
+    </widget>
+    <widget class="QMenu" name="menu_7">
+     <property name="title">
+      <string>中间代码优化</string>
+     </property>
+     <addaction name="actionchangliang"/>
+     <addaction name="actiongonggong"/>
+     <addaction name="actionxunhuan"/>
+    </widget>
+    <addaction name="actionyuyi"/>
+    <addaction name="menu_6"/>
+    <addaction name="menu_7"/>
+   </widget>
+   <addaction name="menu_3"/>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_4"/>
+   <addaction name="menu_5"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionFirst">
+   <property name="text">
+    <string>First集</string>
+   </property>
+  </action>
+  <action name="actionFollow">
+   <property name="text">
+    <string>Follow集</string>
+   </property>
+  </action>
+  <action name="actionPredict">
+   <property name="text">
+    <string>Predict集</string>
+   </property>
+  </action>
+  <action name="GramTable">
+   <property name="text">
+    <string>LL(1)语法分析表</string>
+   </property>
+  </action>
+  <action name="Lexical">
+   <property name="text">
+    <string>词法分析</string>
+   </property>
+  </action>
+  <action name="Grammar">
+   <property name="text">
+    <string>LL(1)语法分析</string>
+   </property>
+  </action>
+  <action name="actionsave">
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </action>
+  <action name="actionopen">
+   <property name="text">
+    <string>打开...</string>
+   </property>
+  </action>
+  <action name="actionsaveas">
+   <property name="text">
+    <string>另存为...</string>
+   </property>
+  </action>
+  <action name="actionabout111">
+   <property name="text">
+    <string>关于...</string>
+   </property>
+  </action>
+  <action name="actionabout">
+   <property name="text">
+    <string>关于...</string>
+   </property>
+  </action>
+  <action name="actionyuyi">
+   <property name="text">
+    <string>语义分析</string>
+   </property>
+  </action>
+  <action name="actioninter">
+   <property name="text">
+    <string>中间代码生成</string>
+   </property>
+  </action>
+  <action name="actionobj">
+   <property name="text">
+    <string>目标代码生成</string>
+   </property>
+  </action>
+  <action name="actionchangliang">
+   <property name="text">
+    <string>常量表达式优化</string>
+   </property>
+  </action>
+  <action name="actiongonggong">
+   <property name="text">
+    <string>公共表达式优化</string>
+   </property>
+  </action>
+  <action name="actionxunhuan">
+   <property name="text">
+    <string>循环不变式外提</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
